@@ -13,7 +13,10 @@
 <body>
 <h1>Welcome to netmap.home!</h1>
 <ul>
-    <li> <a href="http://192.168.1.1">some.home</a>    </li>
-    <li> <a href="http://192.168.1.5">some2.home</a>    </li>
+{{range .Hosts}}
+     <li>
+         <a href="http://{{.IP}}">{{.Label}}</a>
+     </li>
+{{end}}
 </body>
 </html>
